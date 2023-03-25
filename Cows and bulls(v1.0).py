@@ -11,7 +11,7 @@ def cows_and_bulls():
 
     while remaining_tries > 0:
         # generate a random number
-        randNum = str(random.randint(1000, 9999))
+        rand_num = str(random.randint(1000, 9999))
         usr_guess = input('\nGuess a 4-digit number.\n')
 
         # Length of user's guess should be 4
@@ -19,9 +19,9 @@ def cows_and_bulls():
             print('Invalid input')
             usr_guess = input('Guess a 4-digit number.\n')
 
-        if usr_guess == randNum:
+        if usr_guess == rand_num:
             print('Yayyy!!! You guessed it.\n'
-                  f'The secret number is {randNum}.'
+                  f'The secret number is {rand_num}.'
                   'You win!!')
             print(f'Bulls: {bulls}\n'
                   f'Cows: {cows}\n')
@@ -29,23 +29,23 @@ def cows_and_bulls():
 
         # compare user's guess to random number
         # Bulls block
-        elif usr_guess[0] == randNum[0]:
+        elif usr_guess[0] == rand_num[0]:
             bulls += 1
-        elif usr_guess[1] == randNum[1]:
+        elif usr_guess[1] == rand_num[1]:
             bulls += 1
-        elif usr_guess[2] == randNum[2]:
+        elif usr_guess[2] == rand_num[2]:
             bulls += 1
-        elif usr_guess[3] == randNum[3]:
+        elif usr_guess[3] == rand_num[3]:
             bulls += 1
 
         # Cows block
-        elif usr_guess[0] in randNum and usr_guess[0] != randNum[0]:
+        elif usr_guess[0] in rand_num and usr_guess[0] != rand_num[0]:
             cows += 1
-        elif usr_guess[1] in randNum and usr_guess[1] != randNum[1]:
+        elif usr_guess[1] in rand_num and usr_guess[1] != rand_num[1]:
             cows += 1
-        elif usr_guess[2] in randNum and usr_guess[2] != randNum[2]:
+        elif usr_guess[2] in rand_num and usr_guess[2] != rand_numrand_num[2]:
             cows += 1
-        elif usr_guess[3] in randNum and usr_guess[3] != randNum[3]:
+        elif usr_guess[3] in rand_num and usr_guess[3] != rand_num[3]:
             cows += 1
 
         # Quit block
@@ -62,7 +62,7 @@ def cows_and_bulls():
                   'Try again\n')
             remaining_tries -= 1
 
-        print(f'The secret number is {randNum}\n')
+        print(f'The secret number is {rand_num}\n')
         print(f'Bulls: {bulls}\n'
               f'Cows: {cows}\n'
               f'Remaining attempts: {remaining_tries}')
